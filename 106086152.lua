@@ -306,8 +306,8 @@ local SaveManager = loadstring(game:HttpGetAsync("https://raw.githubusercontent.
 local InterfaceManager = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ActualMasterOogway/Fluent-Renewed/master/Addons/InterfaceManager.luau"))()
  
 local Window = Library:CreateWindow{
-    Title = `Private Script [TPS Ultimate Soccer]`,
-    SubTitle = "",
+    Title = `Twistzz Hub [TPS Ultimate Soccer]`,
+    SubTitle = "By Twistzz",
     TabWidth = 160,
     Size = UDim2.fromOffset(570, 450),
     Resize = true, -- Resize this ^ Size according to a 1920x1080 screen, good for mobile users but may look weird on some devices
@@ -850,6 +850,16 @@ Toggle:OnChanged(function(Val)
     end
 end)
 
+local InterfaceSection = Tabs.Tab3:Section("______________________________________________________________________________________")
+
+Tabs.Tab3:CreateButton{
+    Title = "Instant Stamina Adder",
+    Description = "",
+    Callback = function()
+        local args = {1540385087, "SkillA", false}
+        pcall(function() workspace.FE.PlayerCard.Boost:FireServer(unpack(args)) end)
+    end
+}
 local InterfaceSection = Tabs.Tab3:Section("______________________________________________________________________________________")
 
 
