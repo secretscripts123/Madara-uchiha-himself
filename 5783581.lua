@@ -852,6 +852,16 @@ end)
 
 local InterfaceSection = Tabs.Tab3:Section("______________________________________________________________________________________")
 
+Tabs.Tab3:CreateButton{
+    Title = "Instant Stamina Adder",
+    Description = "",
+    Callback = function()
+        local args = {1540385087, "SkillA", false}
+        pcall(function() workspace.FE.PlayerCard.Boost:FireServer(unpack(args)) end)
+    end
+}
+local InterfaceSection = Tabs.Tab3:Section("______________________________________________________________________________________")
+
 
 local Toggle = Tabs.Tab3:CreateToggle("MyToggle", {Title = "Anti VoteKick ", Default = false })
 
